@@ -9,7 +9,7 @@ This project is a skills assessment for Rearc. The project was a blast to work o
 
 ## Prerequisites
 
-- Git 'https://git-scm.com/'
+- Git `https://git-scm.com/`
 - AWS-CLI (configured with key/secret that has access to all VPC/Subnet/IG, EC2, SG, ALB, and ACM) 'https://aws.amazon.com/cli/'
 - Terraform 'https://www.terraform.io/downloads.html'
 
