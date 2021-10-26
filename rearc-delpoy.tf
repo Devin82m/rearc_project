@@ -171,7 +171,7 @@ resource "aws_lb_target_group_attachment" "devintest-tg" {
   subnets            = [ aws_subnet.devintest_public_a.id,
   aws_subnet.devintest_public_b.id
   ]
-  enable_http2       = false
+  enable_http2       = false # I turned HTTP2 off because I still don't fully understand it see a need for it
   enable_deletion_protection = false
 }
 
@@ -192,7 +192,7 @@ resource "aws_lb_listener" "devintest_listener" {
 ###
 # Optional SNS Notification Of Completion 
 ##
-
+# This was overkill for this project and I was just going to email the output below.
 
 # Output ALB DNS
 output "alb_dns" {
