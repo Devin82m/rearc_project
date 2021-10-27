@@ -1,0 +1,36 @@
+
+Terraform Outline
+=================
+
+- Create VPC
+- Create 2 Public Subnets
+- Create IGW
+- Create Route Tables
+- Create Security Group
+	- SSH
+	- HTTP
+	- HTTPS
+	- TCP Custom Port 3000
+- Create Keypair
+- Create EC2 Instance
+	- Bootstrap:
+		- Update
+		- Upgrade
+		- Install Git
+		- Clone Repo
+		- Install Docker and start service
+			- sudo systemctl enable docker.service
+			- sudo systemctl start docker.service
+		- Docker Build
+			- sudo docker build . -t devin82m/rearc_test
+		- Docker Run
+			- sudo docker run -p 443:3000 -d devin82m/rearc_test
+- Import SSL Cert In to ACM
+-  Create Target Group
+	- Port 3000
+	- Attach Instance To TG
+- Create ALB
+	- Listen on HTTPS
+	- SSL Cert
+	- Target Group Rearc-Test-TG
+- Email Notification That Site Is Ready
